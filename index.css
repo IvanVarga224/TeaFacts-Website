@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
+:root {
+    --Caption: clamp(0.75rem, calc(0.87rem + -0.16vw), 0.83rem);
+    --Body: clamp(1.00rem, calc(1.00rem + 0.00vw), 1.00rem);
+    --Label: clamp(1.20rem, calc(1.15rem + 0.26vw), 1.33rem);
+    --Subtitle: clamp(1.44rem, calc(1.31rem + 0.66vw), 1.78rem);
+    --Title: clamp(1.73rem, calc(1.48rem + 1.25vw), 2.37rem);
+    --Heading: clamp(2.07rem, calc(1.65rem + 2.11vw), 3.16rem);
+    --Display: clamp(2.49rem, calc(1.82rem + 3.36vw), 4.21rem);
+  }
+
 html{
     font-family: 'Roboto', sans-serif;
-    background-color: #F1F1F1;
 }
 
 body{
     margin: 0;
     padding: 0;
+    min-height:100vh;
     box-sizing: border-box;
+    background-color: #F1F1F1;
 }
   
 .holder{
@@ -16,11 +27,12 @@ body{
     top: 50%;
     left:50%;
     width: 80%;
-    height:80vh;
+    min-height:80vh;
     transform: translate(-50%, -50%);
     background: #FFFFFF;
     box-shadow: 0px 10px 8px 1px rgba(0, 0, 0, 0.14);
     border-radius: 16px;
+    font-size: var(--Label);
 }
 
 .navbar{
@@ -62,8 +74,31 @@ body{
     color: #000;
 }
 
+.main{
+    width: 90%;
+    margin: 0 auto;
+}
 
+.main-content{
+    display: flex;
+    gap: 64px;
+}
 
+.main-content p{
+    margin-top: 0;
+    line-height: 1.8;
+}
 
+.main-title h1{
+   font-size: var(--Title);
+}
 
+.par-reference{
+    font-size: var(--Caption);
+    /* font-weight:500; */
+}
+
+.par {
+  font-size:var(--Body);  
+}
 
