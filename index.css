@@ -39,18 +39,19 @@ html{
 body{
     margin: 0;
     padding: 0;
-    min-height:100vh;
     box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
     background-color: var(--background-color);
+    padding-block: 64px;
 }
   
 .holder{
-    position: absolute;
-    top: 50%;
-    left:50%;
+    margin: 0 auto;
     width: 80%;
-    min-height:80vh;
-    transform: translate(-50%, -50%);
     background: var(--surface-color);
     box-shadow: 0px 10px 8px 1px rgba(0, 0, 0, 0.14);
     border-radius: 16px;
@@ -77,7 +78,7 @@ body{
 
 .navbar-list ul{
     display: flex;
-    gap: 32px;
+    gap: var(--space-l-xl);
     list-style: none;
     padding: 0;
 }
@@ -109,7 +110,7 @@ svg:active{
 
 .navbar-media ul{
     display: flex;
-    gap: 32px;
+    gap: var(--space-l-xl);
     list-style: none;
 }
 
@@ -131,13 +132,18 @@ svg:active{
 .main-content p{
     margin-top: 0;
     line-height: 1.8;
-    /* margin-bottom: var(--space-m-l); */
+    margin-bottom: var(--space-m-l);
+}
+
+.main-content p:nth-child(3){
+    margin-bottom: var(--space-s-m);
 }
 
 .main-title h1{
    font-size: var(--Title);
-   /* margin-block: var(--space-l-xl); */
+   margin-block: var(--space-l-xl);
 }
+
 
 .par-reference{
     font-size: var(--Caption);
