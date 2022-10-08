@@ -9,11 +9,18 @@
     --Heading: clamp(2.07rem, calc(1.65rem + 2.11vw), 3.16rem);
     --Display: clamp(2.49rem, calc(1.82rem + 3.36vw), 4.21rem);
 
+    --space-s-m: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+    --space-m-l: clamp(1.50rem, calc(1.30rem + 0.98vw), 2.00rem);
+    --space-l-xl: clamp(2.00rem, calc(1.61rem + 1.95vw), 3.00rem);
+    --space-xl-2xl: clamp(3.00rem, calc(2.61rem + 1.95vw), 4.00rem);
+    
     --background-color:#F1F1F1;
     --surface-color:#FFFFFF;
     --text-color:#333333;
     --nav-color:#000000;
     --brand-color:#46C1DC;
+    --hover-color:#DC7346;
+    --active-color:#E68D61;
   }
 
   .dark-theme{
@@ -21,6 +28,8 @@
     --surface-color:#000000;
     --text-color:#D4D4D4;
     --nav-color:#FFFFFF;
+    --hover-color:#DC7346;
+    --active-color:#E68D61;
   }
 
 html{
@@ -61,8 +70,8 @@ body{
     align-items: center;
 }
 
-.navbar-logo{
-    width: 3%;
+.navbar-logo {
+   width: 5%;
 }
 
 
@@ -73,9 +82,29 @@ body{
     padding: 0;
 }
 
+svg{
+    fill:var(--nav-color);
+}
+
+svg:hover{
+    fill:var(--hover-color);
+}
+
+svg:active{
+    fill:var(--active-color);
+}
+
 .navbar-list a{
     text-decoration: none;
     color: var(--nav-color);
+}
+
+.navbar-elements a:hover{
+    color:var(--hover-color);
+}
+
+.navbar-elements a:active{
+    color:var(--active-color);
 }
 
 .navbar-media ul{
@@ -102,10 +131,12 @@ body{
 .main-content p{
     margin-top: 0;
     line-height: 1.8;
+    /* margin-bottom: var(--space-m-l); */
 }
 
 .main-title h1{
    font-size: var(--Title);
+   /* margin-block: var(--space-l-xl); */
 }
 
 .par-reference{
