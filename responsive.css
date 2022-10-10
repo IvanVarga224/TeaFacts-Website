@@ -1,0 +1,39 @@
+@media only screen and (min-width:320px) and (max-width:480px){
+    .navbar{
+      border-radius: 0;  
+    }
+   
+    .navbar-elements{
+    width: 100%;
+   }
+   
+   .navbar-list ul{
+    flex-direction: column;
+    display: none;
+   }
+
+   .navbar-media{
+    display: none;
+   }
+
+   .holder{
+    width: 100%;
+    border-radius: 0;
+   }
+
+   .container{
+    padding:0
+   }
+
+   .main{
+    width: 100%;
+   }
+
+   .main-content{
+    flex-direction: column-reverse;
+   }
+
+   .main-right img{
+    width: 100%;
+   }
+}
